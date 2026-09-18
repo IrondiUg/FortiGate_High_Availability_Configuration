@@ -19,10 +19,13 @@ This lab demonstrates the configuration and verification of FortiGate High Avail
 **Active Unit**:  The active FortiGate is responsible for handling production traffic and forwarding packets between the relevant interfaces/networks.
 
 **Passive Unit**:  The passive FortiGate continuously monitors the HA cluster and remains ready to assume the active role if the primary unit becomes unavailable.
+
 **Under normal operation:**
 FortiGate 01 → PRIMARY / ACTIVE
 FortiGate 02 → SECONDARY / PASSIVE
+
 **If the active unit fails:**
 FortiGate 01 → OFFLINE
 FortiGate 02 → PRIMARY / ACTIVE
+
 This allows the firewall service to continue with minimal interruption.
