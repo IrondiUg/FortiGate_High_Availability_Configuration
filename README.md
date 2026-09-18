@@ -29,3 +29,15 @@ This lab demonstrates the configuration and verification of FortiGate High Avail
 - FortiGate 02 → PRIMARY / ACTIVE
 
 This allows the firewall service to continue with minimal interruption.
+
+## HA Heartbeat / Cluster Communication
+The HA heartbeat interfaces allow the FortiGates to communicate with each other and exchange cluster information.
+The heartbeat connection is important because the FortiGates use it to determine whether the other cluster member is still available.
+Conceptually:
+FortiGate 01
+     |
+     | HA Heartbeat
+     |
+FortiGate 02
+
+The heartbeat connection allows the cluster members to monitor each other's state.
